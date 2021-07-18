@@ -1,0 +1,50 @@
+@import "../../utils/styles/styles";
+@import "../../utils/styles/colors";
+.detailsSection {
+  //   height: 200px;
+  background-color: $primaryColor;
+  color: white;
+  padding: 10px 10px 0px;
+}
+
+.assName {
+  font-size: 22px;
+  padding: 2px 0;
+  font-weight: bold;
+}
+
+.assMotto {
+  font-style: italic;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.membersCount {
+  padding: 15px 0;
+}
+
+.membersCountNum {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.tabSection {
+  padding-bottom: 5px;
+  margin-top: 15px;
+  display: flex;
+  font-weight: bold;
+}
+
+.tabSection div {
+  padding: 7px 0;
+  flex: 1;
+}
+
+.activeTab {
+  border-bottom: 2px solid white;
+}
+
+.inActiveTab {
+  // color: rgba(255, 255, 255, 0.4);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
