@@ -1,0 +1,67 @@
+@import "../../utils/styles/styles";
+@import "../../utils/styles/colors";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageTitle {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.name {
+  padding: 10px 0 0px 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.email {
+  // padding: 10px 0;
+  padding: 0px 0 1px 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.profiles {
+  font-weight: bold;
+  padding: 5px 0 20px 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.dateJoin {
+  padding: 5px 0 5px 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.role {
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 4px;
+  background-color: green;
+  color: white;
+}
+
+.button {
+  padding: 5px 0 5px 0;
+}
+
+.profileContent {
+  // height: 500px;
+
+  flex-grow: 1;
+  @include scollContent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+.profileContent::-webkit-scrollbar {
+  display: none;
+}

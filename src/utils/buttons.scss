@@ -1,0 +1,17 @@
+@import "./styles/colors";
+@import "./styles/styles";
+
+.button-container {
+  border-radius: 10px;
+  padding: 8px 10px;
+  background-color: $primaryColor;
+  color: white;
+  width: fit-content;
+  font-weight: bold;
+  cursor: pointer;
+  @include flexCenter;
+}
+
+.btnTitle {
+  padding: 0 5px;
+}
