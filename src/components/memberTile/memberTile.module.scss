@@ -1,0 +1,52 @@
+@import "../../utils/styles/colors";
+
+.memberTileContainer {
+  // height: 55px;
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+  margin: 5px 10px;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+.memberTile {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
+  // height: 65%;
+  margin-left: 0px;
+  padding-left: 8px;
+  flex-grow: 1;
+  // border-left: 1px solid #ccc;
+}
+
+.memberTile,
+.name,
+.email {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.memberTile_name {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.memberTile_email {
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+.memberTile_message {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.memberTile_chat_icon {
+  font-size: 24px;
+  color: $primaryColor;
+}

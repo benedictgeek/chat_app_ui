@@ -1,10 +1,11 @@
 import styles from "./mainPage.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import MemberTile from "../../components/memberTile/memberTile";
 
 export let MainPage = () => {
   return (
-    <div>
+    <div className={styles.mainPage}>
       <div className={styles.detailsSection}>
         <div className={styles.assName}>My Association</div>
         <span className={styles.assMotto}>moving onwars and forward</span>
@@ -14,9 +15,18 @@ export let MainPage = () => {
         </div>
 
         <div className={styles.tabSection}>
-          <div className={styles.activeTab}>CHATS</div>
+          <div className={styles.activeTab}>CHATS (3)</div>
           <div className={styles.inActiveTab}>MEMBERS</div>
         </div>
+      </div>
+      <div className={styles.itemsContainer}>
+        <MemberTile />
+        <MemberTile />
+        <MemberTile />
+        <MemberTile />
+        <MemberTile />
+        <MemberTile />
+        <MemberTile />
       </div>
     </div>
   );
