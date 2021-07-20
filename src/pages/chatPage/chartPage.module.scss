@@ -1,0 +1,52 @@
+@import "../../utils/styles/styles";
+@import "../../utils/styles/colors";
+
+.chatMessageContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 5px;
+}
+
+.chatMessageContainer_r {
+  justify-content: flex-start;
+}
+
+.chatMessageBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  right: 20px;
+  border-radius: 20px;
+  min-height: 50px;
+  width: 75%;
+  z-index: 3;
+  color: white;
+  background-color: $chatMessageSenderColor;
+  padding: 10px 10px;
+}
+
+.chatMessageBox_r {
+  background-color: $chatMessageRecipientColor;
+}
+
+.chatMessageBoxTime {
+  margin-top: 8px;
+}
+
+.triangleTopRight {
+  width: 0;
+  height: 0;
+  z-index: 2;
+  margin-left: -30px;
+  border-top: 50px solid $chatMessageSenderColor;
+  border-right: 50px solid transparent;
+}
+
+.triangleTopleft {
+  width: 0;
+  height: 0;
+  z-index: 2;
+  margin-right: -30px;
+  border-top: 50px solid $chatMessageRecipientColor;
+  border-left: 50px solid transparent;
+}

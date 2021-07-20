@@ -4,7 +4,7 @@ import styles from "./memberTile.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 
-export let MemberTile = ({ isMember = false, ...props }) => {
+export let MemberTile = ({ isMember = false, isProfile = false, ...props }) => {
   let userData = props.user
     ? props.user
     : { firstName: "Oliver", lastName: "Gucci", email: "test@me.com" };
@@ -12,7 +12,11 @@ export let MemberTile = ({ isMember = false, ...props }) => {
   return (
     <div
       className={styles.memberTileContainer}
-      style={{ width: props.width && props.width, height: props.height }}
+      style={{
+        width: props.width && props.width,
+        height: props.height,
+        borderBottom: isProfile && "none",
+      }}
     >
       <div className="avartar">
         <Avartar
@@ -25,7 +29,7 @@ export let MemberTile = ({ isMember = false, ...props }) => {
           {`${userData.firstName + " " + userData.lastName}`}
         </div>
         <div className={styles.memberTile_email}>{`${userData.email}`}</div>
-        {!isMember && (
+        {!isMember && !isProfile && (
           <div className={styles.memberTile_message}>
             <span>{"some message here "}</span>
             <span>{"9s"}</span>
