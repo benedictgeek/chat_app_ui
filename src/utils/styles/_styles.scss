@@ -4,6 +4,13 @@
   justify-content: center;
 }
 
+@mixin chatPageDimenstion {
+  height: calc(100vh - 45px);
+  width: calc(100vw - 40px);
+  max-height: 600px;
+  max-width: 400px;
+}
+
 @mixin scollContent {
   overflow: scroll;
   -ms-overflow-style: none;

@@ -13,11 +13,7 @@ export let MainPage = () => {
           <FontAwesomeIcon icon={faUsers} color={"white"} size="1x" />
           <span className={styles.membersCountNum}>23</span>
         </div>
-
-        <div className={styles.tabSection}>
-          <div className={styles.activeTab}>CHATS (3)</div>
-          <div className={styles.inActiveTab}>MEMBERS</div>
-        </div>
+        <TabSection />
       </div>
       <div className={styles.itemsContainer}>
         <MemberTile />
@@ -28,6 +24,15 @@ export let MainPage = () => {
         <MemberTile />
         <MemberTile />
       </div>
+    </div>
+  );
+};
+
+export let TabSection = () => {
+  return (
+    <div className={styles.tabSection}>
+      <div className={styles.activeTab}>CHATS (3)</div>
+      <div className={styles.inActiveTab}>MEMBERS</div>
     </div>
   );
 };

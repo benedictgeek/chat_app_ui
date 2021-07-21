@@ -2,9 +2,35 @@
 @import "../../utils/styles/colors";
 
 .mainPage {
-  height: 100%;
+  // height: 100%;
+  @include chatPageDimenstion;
   display: flex;
   flex-direction: column;
+}
+
+.chatDateCatContainer {
+  width: 100%;
+  @include flexCenter;
+}
+
+.chatDate {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chatDate:after,
+.chatDate:before {
+  content: "";
+  border-bottom: 1px solid $borderColor;
+  flex-grow: 1;
+}
+.chatDate:after {
+  margin-left: 10px;
+}
+.chatDate:before {
+  margin-right: 10px;
 }
 .messagesContainer {
   flex-grow: 1;

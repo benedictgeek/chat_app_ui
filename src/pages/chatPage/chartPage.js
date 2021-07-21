@@ -12,6 +12,7 @@ export let ChartPage = () => {
       <div className={styles.messagesContainer}>
         <MessageBoxSender />
         <MessageBoxSender />
+        <DateCategory />
         <MessageBoxRecipient />
       </div>
       <div className={styles.messageInputContainer}>
@@ -20,6 +21,14 @@ export let ChartPage = () => {
           <FontAwesomeIcon icon={faPaperPlane} />
         </div>
       </div>
+    </div>
+  );
+};
+
+export let DateCategory = () => {
+  return (
+    <div className={styles.chatDateCatContainer}>
+      <div className={styles.chatDate}>today</div>
     </div>
   );
 };

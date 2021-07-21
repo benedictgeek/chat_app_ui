@@ -1,7 +1,8 @@
 @import "../../utils/styles/styles";
 @import "../../utils/styles/colors";
 .container {
-  height: 100%;
+  // height: 100%;
+  @include chatPageDimenstion;
   display: flex;
   flex-direction: column;
 }

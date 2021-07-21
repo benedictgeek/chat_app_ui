@@ -3,8 +3,11 @@ import user from "../../assets/images/user-img-placeholder.png";
 import styles from "./memberTile.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { useChatContext } from "../../state/contextProviders/chatContext/chatContext";
+import { chatPages } from "../../pages/chartPortal/chatPortal";
 
 export let MemberTile = ({ isMember = false, isProfile = false, ...props }) => {
+  let { setPageDispatch } = useChatContext();
   let userData = props.user
     ? props.user
     : { firstName: "Oliver", lastName: "Gucci", email: "test@me.com" };
@@ -17,6 +20,9 @@ export let MemberTile = ({ isMember = false, isProfile = false, ...props }) => {
         height: props.height,
         borderBottom: isProfile && "none",
       }}
+      onClick={() =>
+        setPageDispatch(isMember ? chatPages.PROFILEPAGE : chatPages.CHATPAGE)
+      }
     >
       <div className="avartar">
         <Avartar

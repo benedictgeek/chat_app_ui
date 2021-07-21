@@ -1,12 +1,30 @@
 @import "../../utils/styles/colors";
+@import "../../utils/styles/styles";
+
+.chatPortalFrameContainer {
+  position: relative;
+}
 .chatPortalFrame {
-  height: calc(100vh - 10px);
-  width: calc(100vw - 40px);
-  max-height: 600px;
-  max-width: 400px;
+  @include chatPageDimenstion;
   border: 1px solid rgba(0, 0, 0, 0.281);
   background-color: $chatPortalBgColor;
   border-radius: 15px;
   margin-bottom: 10px;
   overflow: hidden;
+}
+
+.closePortal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -35px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: grey;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  @include flexCenter;
 }
