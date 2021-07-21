@@ -1,20 +1,31 @@
 import MemberTile from "../../components/memberTile/memberTile";
 import { ChatPageHeaderWrapper } from "../../utils/chatPageHeaderWrapper";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import styles from "./chartPage.module.scss";
 export let ChartPage = () => {
   return (
-    <div>
+    <div className={styles.mainPage}>
       <ChatPageHeaderWrapper>
         <MemberTile isProfile={true} />
       </ChatPageHeaderWrapper>
-      <div>
+      <div className={styles.messagesContainer}>
         <MessageBoxSender />
         <MessageBoxSender />
         <MessageBoxRecipient />
       </div>
-      <div></div>
+      <div className={styles.messageInputContainer}>
+        <ChatInput />
+        <div className={styles.messageInputSendBtn}>
+          <FontAwesomeIcon icon={faPaperPlane} />
+        </div>
+      </div>
     </div>
   );
+};
+
+export let ChatInput = () => {
+  return <textarea rows={1} placeholder={"Type in your message..."} />;
 };
 
 export let MessageBoxSender = () => {
