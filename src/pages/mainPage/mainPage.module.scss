@@ -49,11 +49,13 @@
 
 .activeTab {
   border-bottom: 2px solid white;
+  cursor: pointer;
 }
 
 .inActiveTab {
   // color: rgba(255, 255, 255, 0.4);
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
 }
 
 .itemsContainer {

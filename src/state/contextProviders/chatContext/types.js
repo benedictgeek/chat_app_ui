@@ -1,3 +1,4 @@
 export let SET_PORTAL_SWITCH = "SET_PORTAL_SWITCH";
 export let SET_PAGE = "SET_PAGE";
+export let SET_MAIN_PAGE = "SET_MAIN_PAGE";
 // export let SET_ASSOCIATION = "SET_ASSOCIATION";

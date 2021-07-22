@@ -1,6 +1,7 @@
 import React, { useReducer, useContext } from "react";
 import { chatPages } from "../../../pages/chartPortal/chatPortal";
-import { setPortalSwitch, setPage } from "./actions";
+import { tabOptions } from "../../../pages/mainPage/mainPage";
+import { setPortalSwitch, setPage, setMainPageTab } from "./actions";
 import { chatReducer } from "./reducer";
 
 const ChatContext = React.createContext();
@@ -10,6 +11,7 @@ export let useChatContext = () => useContext(ChatContext);
 let initialState = {
   currentPage: chatPages.MAINPAGE,
   portalSwitch: false,
+  currentMainPageTab: tabOptions.CHAT,
 };
 
 export let ChatContextProvider = ({ children }) => {
@@ -20,8 +22,14 @@ export let ChatContextProvider = ({ children }) => {
   const setPageDispatch = (payload) => {
     setPage(payload, dispatch);
   };
+
+  const setMainPageDispatch = (payload) => {
+    setMainPageTab(payload, dispatch);
+  };
   return (
-    <ChatContext.Provider value={{ state, setPortalDispatch, setPageDispatch }}>
+    <ChatContext.Provider
+      value={{ state, setPortalDispatch, setPageDispatch, setMainPageDispatch }}
+    >
       {children}
     </ChatContext.Provider>
   );

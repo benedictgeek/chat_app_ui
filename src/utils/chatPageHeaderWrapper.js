@@ -1,7 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
+import { chatPages } from "../pages/chartPortal/chatPortal";
+import { useChatContext } from "../state/contextProviders/chatContext/chatContext";
 
-export let ChatPageHeaderWrapper = ({ ...props }) => {
+export let ChatPageHeaderWrapper = ({
+  pageRoute = chatPages.MAINPAGE,
+  ...props
+}) => {
+  let { setPageDispatch } = useChatContext();
   return (
     <div
       style={{
@@ -16,7 +22,10 @@ export let ChatPageHeaderWrapper = ({ ...props }) => {
       <div
         style={{
           marginRight: "15px",
+          cursor: "pointer",
+          padding: "5px"
         }}
+        onClick={() => setPageDispatch(pageRoute)}
       >
         <FontAwesomeIcon icon={faLongArrowAltLeft} />
       </div>

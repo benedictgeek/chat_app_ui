@@ -3,10 +3,11 @@ import { ChatPageHeaderWrapper } from "../../utils/chatPageHeaderWrapper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import styles from "./chartPage.module.scss";
+import { chatPages } from "../chartPortal/chatPortal";
 export let ChartPage = () => {
   return (
     <div className={styles.mainPage}>
-      <ChatPageHeaderWrapper>
+      <ChatPageHeaderWrapper pageRoute={chatPages.MAINPAGE}>
         <MemberTile isProfile={true} />
       </ChatPageHeaderWrapper>
       <div className={styles.messagesContainer}>
